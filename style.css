@@ -1,0 +1,53 @@
+<script>
+body{ color : black;}
+  #main{
+    font-size: 30px;
+    color: red;
+  }
+h1 {
+  font-color: black;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  margin: 0;
+  padding:20px;
+}
+a{
+   color :green;
+   text-decoration: none;
+}
+
+
+  #grid {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        }
+  #grid #article {
+        padding-left: 20px;
+                }
+  #grid ol{
+        border-right: 1px solid gray;
+        width: 150px;
+        margin: 0;
+        padding: 20px;
+           }
+
+   @media (max-width:500px){
+      #grid {display:block;}
+      ol{border-rigth:none;}
+      h1{border-bottom: none;}
+
+      }
+   }
+
+   }
+
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133569712-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-133569712-1');
+</script>

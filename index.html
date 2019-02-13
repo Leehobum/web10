@@ -1,71 +1,61 @@
-!<!DOCTYPE html>
-<head>
-<title>edu1</title>
-<meta  charset="utf-8">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133569712-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>업무관리메인</title>
+    <style media="screen">
+       h1 {
+         border: solid red 5px;
+         text-align: center;
+         padding: 5px;
+         width: 500px;
+         margin:10px;
+       }
+    </style>
+    <script>
+    function day_night(self)
+    {
+    var target = document.querySelector('body')
+    if (self.value === '야간')
+    {   target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.value = '주간';
 
-  gtag('config', 'UA-133569712-2');
-</script>
-</head>
+       var alist = document.querySelectorAll('a')
+       var i=0;
+       while(i<alist.length){
+       console.log(alist[i]);
+       alist[i].style.color='powderblue';
+       i=i+1;
+                            }
+     }
+     else{
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        self.value ='야간';
 
+        var alist = document.querySelectorAll('a')
+        var i=0;
+        while(i<alist.length){
+        console.log(alist[i]);
+        alist[i].style.color='blue';
+        i=i+1;
+                             }
+          }
+    }
+  </script>
+  </head>
+  <body>
+    <h1>업무관리</h1>
+        웹을 통해 업무관리는 합니다.
+        <input type="button" value="야간" onclick="day_night(this)">
 
-<body>
-  <h1><u><a href="index.html">교육관리</a></u></h1>
-  <h2><strong>해당 교육을 클릭하세요</strong></h2>
-  <p><iframe width="30%" height="315" src="20180308_214942.mp4"
-    frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe></p>
-  <p><iframe width="30%" height="315" src="20150815_203927.mp4"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe></p>
-<ol>
- <li> <a href="1-1.html">안전,소방,보건,보안</a></li>
- <li> <a href="1-2.html">외부교육</a></li>
- <li> <a href="1-3.html">내부교육</a></li>
- <li> <a href="1-4.html">금요강좌</a></li>
-</ol>
-<img src="coding.jpg" width="30%">
-<p>
+    <ol>
+      <li><a href="edu.html">교육관리</a></li>
+      <li><a href="#">기술지원관리</a></li>
+      <li><a href="#">서버접수</a></li>
+      <li><a href="#">라이센스관리</a></li>
+    </ol>
 
-<div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://web10-1.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</p>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5c520e2a51410568a10962c0/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-</body>
+  </body>
+</html>

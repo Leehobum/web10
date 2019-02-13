@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style>
+      input[type=button]{
+      background-color: red;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-decoration: none;}
+    </style>
+
+
+  </head>
+<h1>condi stats</h1>
+    <script>
+      document.write(1<2);
+      document.write("1<br>");
+      document.write("2<br>");
+      document.write("3<br>");
+      document.write("4<br>");
+    </script>
+
+
+<h2>IF-true</h2>
+    <script>
+      document.write("1<br>");
+        if (true)                           {
+            document.write("2<br>");        }
+        else                                {
+            document.write("3<br>");        }
+      document.write("4<br>");
+    </script>
+
+===========================================================<br>
+
+
+<h1>이벤트발생시간</h1>
+<audio controls>
+  <source src="critical.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<div>
+  <p id="o"></p>
+  <script>
+    document.getElementById('o').innerHTML = Date();
+  </script>
+    <input id="event" type="button" background-color="powered" value="이벤트발생" onclick="
+ if(document.querySelector('#event').value === '이벤트발생'){
+  document.querySelector('input').style.backgroundColor='green';
+  document.getElementById('o').innerHTML = Date();
+  document.querySelector('#event').value = '확인시간';
+    }
+
+ else {
+    document.querySelector('input').style.backgroundColor='white';
+    document.getElementById('o').innerHTML = Date();
+    document.querySelector('input').style.color='black';
+    document.querySelector('#event').value = '이벤트완료';
+
+  }
+  ">
+  <div>
+  </div>
+</div>
+
+
+
+  </body>
+</html>
